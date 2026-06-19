@@ -37,7 +37,10 @@ button {
 
 .page-header {
     padding: 1rem 2rem 2rem;
-    background: linear-gradient(180deg, rgba(20, 80, 57, 0.96), rgba(10, 66, 45, 0.72));
+    background: linear-gradient(180deg, rgba(10, 66, 45, 0.92), rgba(10, 66, 45, 0.78)), url('../../assets/images/myles-davis-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-bottom: 1px solid rgba(212, 175, 55, 0.12);
 }
 
@@ -259,11 +262,72 @@ button {
     color: var(--muted);
 }
 
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.features article {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    border-radius: 1.25rem;
+}
+
+.features h2 {
+    margin: 0 0 0.75rem;
+    color: #fff;
+}
+
+.features p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.showcase-copy {
+    color: var(--muted);
+}
+
+.showcase-copy h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.showcase-copy p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin: 1rem 0;
+}
+
+.showcase-copy ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    color: var(--muted);
+}
+
+.showcase-copy li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.9rem;
+}
+
+.showcase-copy li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
 @media (max-width: 900px) {
     .grid-card,
     .story-section,
     .values,
-    .team-grid {
+    .team-grid,
+    .features {
         grid-template-columns: 1fr;
     }
 }
