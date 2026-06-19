@@ -236,6 +236,73 @@ button {
     color: #fff;
 }
 
+.contact-card {
+    background: linear-gradient(180deg, rgba(15, 60, 42, 0.95), rgba(11, 44, 33, 0.95));
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card h2 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.grid-card {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2rem;
+}
+
+.grid-card div:first-child {
+    display: grid;
+    gap: 1rem;
+}
+
+.grid-card p strong {
+    color: var(--text);
+}
+
 .callout {
     text-align: center;
 }
