@@ -294,6 +294,20 @@ button {
     gap: 2rem;
 }
 
+.contact-grid {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.contact-grid > div:first-child {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
 .grid-card div:first-child {
     display: grid;
     gap: 1rem;
