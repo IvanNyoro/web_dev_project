@@ -4,93 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrassCraft | About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUa1z5+0eUQZq2n2Yn3f6k7VS9Kzhu/xM5tQ7r4zyértYt0KrQz6t7A1Kgz8" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header class="page-header">
-        <nav class="navbar">
-            <a class="brand" href="index.html">BrassCraft</a>
-            <div class="panel">
-                <a href="index.html">Home</a>
-                <a href="products.html">Trumpets</a>
-                <a href="about.html">About</a>
-            </div>
-            <div class="interactives">
-                <button type="button" onclick="window.location.href='signup.html'">Sign Up</button>
-                <button type="button" onclick="window.location.href='login.html'">Login</button>
-                <button type="button" onclick="window.location.href='contact.html'">Contact Us</button>
-            </div>
-        </nav>
+        <div class="container">
+            <nav class="navbar">
+                <a class="brand" href="index.html">BrassCraft</a>
+                <div class="panel">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Trumpets</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="interactives">
+                    <button type="button" onclick="window.location.href='signup.html'">Sign Up</button>
+                    <button type="button" onclick="window.location.href='login.html'">Login</button>
+                    <button type="button" onclick="window.location.href='contact.html'">Contact Us</button>
+                </div>
+            </nav>
 
-        <div class="hero-section">
-            <p class="eyebrow">Our Story</p>
-            <h1>Built on Craft, Driven by Sound</h1>
-            <p>From the first note to the final performance, BrassCraft is dedicated to creating premium trumpets with timeless tone, elegant design, and unmatched service.</p>
+            <div class="hero-section">
+                <p class="eyebrow">Our Story</p>
+                <h1>Built on Craft, Driven by Sound</h1>
+                <p>From the first note to the final performance, BrassCraft is dedicated to creating premium trumpets with timeless tone, elegant design, and unmatched service.</p>
+            </div>
         </div>
     </header>
 
     <main class="content">
-        <section class="grid-card">
-            <div>
-                <h2>Who We Are</h2>
-                <p>We are a team of brass players, instrument makers, and audio experts who believe a great trumpet should empower every musician. Our instruments combine traditional craftsmanship with modern materials so every trumpet sings with clarity.</p>
-            </div>
-            <div>
-                <h2>What We Value</h2>
-                <ul>
-                    <li>Exceptional playability</li>
-                    <li>Precision craftsmanship</li>
-                    <li>Responsive, balanced tone</li>
-                    <li>Trusted service and support</li>
-                </ul>
+        <section class="grid-card container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Who We Are</h2>
+                    <p>We are a team of brass players, instrument makers, and audio experts who believe a great trumpet should empower every musician. Our instruments combine traditional craftsmanship with modern materials so every trumpet sings with clarity.</p>
+                </div>
+                <div class="col-md-6">
+                    <h2>What We Value</h2>
+                    <ul>
+                        <li>Exceptional playability</li>
+                        <li>Precision craftsmanship</li>
+                        <li>Responsive, balanced tone</li>
+                        <li>Trusted service and support</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section class="story-section">
-            <div>
-                <h2>Our Journey</h2>
-                <p>BrassCraft began as a small workshop for brass enthusiasts. Today, we serve players worldwide with custom trumpet builds, repairs, and strategic guidance. Every step in our process is rooted in music and made for musicians.</p>
+        <section class="story-section container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Our Journey</h2>
+                    <p>BrassCraft began as a small workshop for brass enthusiasts. Today, we serve players worldwide with custom trumpet builds, repairs, and strategic guidance. Every step in our process is rooted in music and made for musicians.</p>
+                </div>
+                <div class="col-lg-6 story-image">Founded in Sound</div>
             </div>
-            <div class="story-image">Founded in Sound</div>
         </section>
 
-        <section class="values">
-            <article>
-                <h3>Integrity</h3>
-                <p>Honest recommendations, transparent pricing, and instruments built to last.</p>
-            </article>
-            <article>
-                <h3>Craftsmanship</h3>
-                <p>Every trumpet is assembled and tuned with meticulous attention to detail.</p>
-            </article>
-            <article>
-                <h3>Community</h3>
-                <p>We support students, professionals, and teachers through better instruments and better service.</p>
-            </article>
+        <section class="values container">
+            <div class="row">
+                <article class="col-md-4">
+                    <h3>Integrity</h3>
+                    <p>Honest recommendations, transparent pricing, and instruments built to last.</p>
+                </article>
+                <article class="col-md-4">
+                    <h3>Craftsmanship</h3>
+                    <p>Every trumpet is assembled and tuned with meticulous attention to detail.</p>
+                </article>
+                <article class="col-md-4">
+                    <h3>Community</h3>
+                    <p>We support students, professionals, and teachers through better instruments and better service.</p>
+                </article>
+            </div>
         </section>
 
-        <section class="team-card">
+        <section class="team-card container">
             <h2>Meet the Team</h2>
-            <div class="team-grid">
-                <div>
-                    <strong>Myles Davis</strong>
-                    <p>Founder & Head Designer</p>
+            <div class="row team-grid">
+                <div class="col-md-4">
+                    <div>
+                        <strong>Myles Davis</strong>
+                        <p>Founder & Head Designer</p>
+                    </div>
                 </div>
-                <div>
-                    <strong>Ivan Nyoro</strong>
-                    <p>Master Technician</p>
+                <div class="col-md-4">
+                    <div>
+                        <strong>Ivan Nyoro</strong>
+                        <p>Master Technician</p>
+                    </div>
                 </div>
-                <div>
-                    <strong>Roy Hargrove</strong>
-                    <p>Customer Experience Lead</p>
+                <div class="col-md-4">
+                    <div>
+                        <strong>Roy Hargrove</strong>
+                        <p>Customer Experience Lead</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="callout">
+        <section class="callout container">
             <h2>Find Your Sound</h2>
             <p>Whether you're searching for a first professional trumpet or a custom upgrade, our team is ready to guide you to the right instrument.</p>
-            <button type="button" onclick="window.location.href='contact.html'">Talk with a Specialist</button>
+            <button type="button" class="btn primary" onclick="window.location.href='contact.html'">Talk with a Specialist</button>
         </section>
     </main>
 

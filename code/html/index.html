@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrassCraft Trumpets | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUa1z5+0eUQZq2n2Yn3f6k7VS9Kzhu/xM5tQ7r4zyértYt0KrQz6t7A1Kgz8" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -30,38 +31,42 @@
     </header>
 
     <main class="content">
-        <section class="features">
-            <article>
-                <h2>Signature Models</h2>
-                <p>Designed for clarity, projection, and comfortable playing across every register.</p>
-            </article>
-            <article>
-                <h2>Custom Setup</h2>
-                <p>Personalized mouthpiece fitting, bore sizing, and tuning to match your style.</p>
-            </article>
-            <article>
-                <h2>Trusted Service</h2>
-                <p>Rapid repairs, maintenance, and expert advice from brass specialists.</p>
-            </article>
-        </section>
-
-        <section class="story-section">
-            <div class="showcase-copy">
-                <h2>Featured Trumpet</h2>
-                <p>The BrassCraft Pro Series blends pro-level tone with superior intonation. Perfect for stage, studio, and competitions.</p>
-                <ul>
-                    <li>Hand-lathed leadpipe</li>
-                    <li>Alloy bell for warm, focused sound</li>
-                    <li>Responsive valves and ergonomic wrap</li>
-                </ul>
-                <a href="products.html" style="display: inline-block; margin-top: 1rem; padding: 0.95rem 1.7rem; border-radius: 999px; background: var(--accent); color: #0a422d; font-weight: 700; text-decoration: none;">View Collection</a>
-            </div>
-            <div class="story-image">
-                <div style="text-transform: none;">BrassCraft Pro Series</div>
+        <section class="features container">
+            <div class="row">
+                <article class="col-md-4">
+                    <h2>Signature Models</h2>
+                    <p>Designed for clarity, projection, and comfortable playing across every register.</p>
+                </article>
+                <article class="col-md-4">
+                    <h2>Custom Setup</h2>
+                    <p>Personalized mouthpiece fitting, bore sizing, and tuning to match your style.</p>
+                </article>
+                <article class="col-md-4">
+                    <h2>Trusted Service</h2>
+                    <p>Rapid repairs, maintenance, and expert advice from brass specialists.</p>
+                </article>
             </div>
         </section>
 
-        <section class="callout">
+        <section class="story-section container">
+            <div class="row">
+                <div class="col-lg-6 showcase-copy">
+                    <h2>Featured Trumpet</h2>
+                    <p>The BrassCraft Pro Series blends pro-level tone with superior intonation. Perfect for stage, studio, and competitions.</p>
+                    <ul>
+                        <li>Hand-lathed leadpipe</li>
+                        <li>Alloy bell for warm, focused sound</li>
+                        <li>Responsive valves and ergonomic wrap</li>
+                    </ul>
+                    <a class="btn primary" href="products.html">View Collection</a>
+                </div>
+                <div class="col-lg-6 story-image">
+                    <div style="text-transform: none;">BrassCraft Pro Series</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="callout container">
             <h2>What Musicians Are Saying</h2>
             <blockquote style="margin: 0; color: var(--muted); font-size: 1.05rem; line-height: 1.9;">
                 "My BrassCraft trumpet feels alive — the projection and response are incredible."
@@ -71,14 +76,15 @@
     </main>
 
     <footer class="footer">
-        <div>
-            <p>BrassCraft Trumpets | Crafted for players who demand precision.</p>
-            <p><a href="contact.html">Contact us</a> · <a href="about.html">About</a></p>
+        <div class="container footer-inner">
+            <div>
+                <p>BrassCraft Trumpets | Crafted for players who demand precision.</p>
+                <p><a href="contact.html">Contact us</a> · <a href="about.html">About</a></p>
+            </div>
+            <p>&copy; 2026 BrassCraft. All rights reserved.</p>
         </div>
-        <p>&copy; 2026 BrassCraft. All rights reserved.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>
