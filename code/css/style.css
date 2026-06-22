@@ -194,12 +194,12 @@ button {
     letter-spacing: 0.12em;
 }
 
-..values {
+.values {
     display: block;
 }
 
 .values article {
-    padding: 0;
+    padding: 5px;
     background: transparent;
     border: none;
 }
@@ -215,6 +215,12 @@ button {
     transform: translateY(-3px);
     background: rgba(255, 255, 255, 0.08);
     box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.value-card,
+.team-member-card,
+.feature-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
 }
 
 .values h3 {
@@ -383,10 +389,22 @@ button {
 }
 
 .features article {
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(212, 175, 55, 0.12);
-    border-radius: 1.25rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(212, 175, 55, 0.14);
+    border-radius: 1.5rem;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
 }
 
 .features h2 {
