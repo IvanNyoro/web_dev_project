@@ -4,45 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrassCraft | Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Trumpets</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <header class="page-header">
+        <div class="container">
+            <nav class="navbar">
+                <a class="brand" href="index.html">BrassCraft</a>
+                <div class="panel">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Trumpets</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="interactives">
+                    <button type="button" onclick="window.location.href='signup.html'">Sign Up</button>
+                    <button type="button" onclick="window.location.href='login.html'">Login</button>
+                    <button type="button" onclick="window.location.href='contact.html'">Contact Us</button>
+                </div>
+            </nav>
+
+            <div class="hero-section">
+                <p class="eyebrow">Account Access</p>
+                <h1>Welcome back</h1>
+                <p>Log in to access your BrassCraft account, view orders, and manage preferences.</p>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h1>Login</h1>
-            <p>Access your BrassCraft account to manage orders and preferences.</p>
-
-            <form action="/login" method="post">
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required autocomplete="email">
+    <main class="content">
+        <section class="contact-grid container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="contact-card">
+                        <h2>Sign in</h2>
+                        <form action="/login" method="post" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required autocomplete="current-password">
+                            </div>
+                            <div class="form-group form-check d-flex align-items-center gap-2">
+                                <input type="checkbox" id="remember" name="remember" class="form-check-input">
+                                <label for="remember" class="form-check-label mb-0">Remember me</label>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn primary">Log in</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required autocomplete="current-password">
-                </div>
-                <div>
-                    <label>
-                        <input type="checkbox" name="remember">
-                        Remember me
-                    </label>
-                </div>
-                <div>
-                    <button type="submit">Log in</button>
-                </div>
-            </form>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2026 BrassCraft</p>
     </footer>
 </body>
