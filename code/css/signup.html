@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Sign Up</title>
+	</head>
+	<body>
+		<main>
+			<h1>Sign Up</h1>
+
+			<form id="signupForm" action="/signup" method="post" novalidate>
+				<div>
+					<label for="fullName">Full name</label>
+					<input type="text" id="fullName" name="fullName" required autocomplete="name" />
+				</div>
+
+				<div>
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required autocomplete="email" />
+				</div>
+
+				<div>
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password" required minlength="8" autocomplete="new-password" />
+				</div>
+
+				<div>
+					<label for="confirmPassword">Confirm password</label>
+					<input type="password" id="confirmPassword" name="confirmPassword" required minlength="8" autocomplete="new-password" />
+				</div>
+
+				<div>
+					<label for="phone">Phone (optional)</label>
+					<input type="tel" id="phone" name="phone" autocomplete="tel" />
+				</div>
+
+				<div>
+					<input type="checkbox" id="terms" name="terms" required />
+					<label for="terms">I agree to the terms and privacy policy</label>
+				</div>
+
+				<div id="formErrors" aria-live="polite" style="color: red;"></div>
+
+				<div>
+					<button type="submit">Create account</button>
+				</div>
+			</form>
+		</main>
+
+		<script>
+			(function () {
+				const form = document.getElementById('signupForm');
+				const password = document.getElementById('password');
+				const confirm = document.getElementById('confirmPassword');
+				const errors = document.getElementById('formErrors');
+
+				function showError(msg) {
+					errors.textContent = msg;
+				}
+
+				function clearError() {
+					errors.textContent = '';
+				}
+
+				password.addEventListener('input', clearError);
+				confirm.addEventListener('input', clearError);
+
+				form.addEventListener('submit', function (e) {
+					clearError();
+
+					if (password.value !== confirm.value) {
+						e.preventDefault();
+						showError('Passwords do not match.');
+						confirm.focus();
+						return;
+					}
+
+					if (!form.checkValidity()) {
+						e.preventDefault();
+						showError('Please fill out the required fields correctly.');
+						return;
+					}
+
+					// Form is valid; let it submit. Server-side should still validate.
+				});
+			})();
+		</script>
+	</body>
+</html>
