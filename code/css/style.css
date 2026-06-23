@@ -302,6 +302,21 @@ button {
     color: rgba(228, 228, 228, 0.5);
 }
 
+.form-check {
+    margin-bottom: 1rem;
+}
+
+.form-check-input {
+    width: 1.15rem;
+    height: 1.15rem;
+    margin: 0;
+    accent-color: var(--accent);
+}
+
+.form-check-label {
+    color: var(--text);
+}
+
 .form-control:focus {
     outline: none;
     border-color: var(--accent);
