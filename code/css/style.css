@@ -312,6 +312,12 @@ button {
     justify-content: flex-start;
 }
 
+.form-error {
+    color: #ffb3a7;
+    margin: 0.5rem 0 1rem;
+    min-height: 1.4rem;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
