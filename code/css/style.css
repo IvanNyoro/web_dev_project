@@ -264,6 +264,8 @@ button {
     background: linear-gradient(180deg, rgba(15, 60, 42, 0.95), rgba(11, 44, 33, 0.95));
     border: 1px solid rgba(212, 175, 55, 0.15);
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem;
+    padding: 2rem;
 }
 
 .contact-card h2 {
