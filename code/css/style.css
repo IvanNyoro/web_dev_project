@@ -4,7 +4,7 @@
     --surface-strong: #103f30;
     --accent: #d4af37;
     --accent-soft: rgba(212, 175, 55, 0.18);
-    --text: #f8f5e9;
+    --text: #e4e4e4;
     --muted: #c5d1c7;
     --border: rgba(212, 175, 55, 0.25);
     font-family: Inter, system-ui, sans-serif;
@@ -299,7 +299,7 @@ button {
 }
 
 .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(228, 228, 228, 0.5);
 }
 
 .form-control:focus {
@@ -307,6 +307,7 @@ button {
     border-color: var(--accent);
     background: rgba(255, 255, 255, 0.08);
     box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+    color: var(--text);
 }
 
 .form-actions {
