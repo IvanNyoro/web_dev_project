@@ -506,3 +506,99 @@ button {
         justify-content: flex-start;
     }
 }
+
+/* FAQ Accordion Styling */
+.accordion {
+    border: none;
+}
+
+.accordion-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 1rem;
+    margin-bottom: 0.75rem;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.accordion-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(212, 175, 55, 0.25);
+}
+
+.accordion-button {
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1.25rem;
+    transition: color 0.2s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--accent);
+    box-shadow: none;
+}
+
+.accordion-button:hover {
+    color: var(--accent);
+}
+
+.accordion-button:focus {
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23d4af37'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    filter: brightness(1.2);
+}
+
+.accordion-body {
+    padding: 0 1.25rem 1.25rem;
+    color: var(--muted);
+    line-height: 1.8;
+    border: none;
+    background: transparent;
+}
+
+/* FAQ CTA Styling */
+#faq-cta.callout .btn.primary {
+    margin-top: 1rem;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-inner div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-inner p {
+    margin: 0;
+}
+
+.footer-inner a {
+    color: var(--accent);
+    transition: color 0.2s ease;
+}
+
+.footer-inner a:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
