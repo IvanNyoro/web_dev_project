@@ -132,8 +132,7 @@ button {
 }
 
 .grid-card,
-.story-section,
-.values,
+.values,.story-section,
 .team-card,
 .callout {
     background: var(--surface);
@@ -178,11 +177,12 @@ button {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 1.5rem;
-    align-items: center;
+    align-items: stretch;
 }
 
 .story-image {
     min-height: 260px;
+    height: 100%;
     display: grid;
     place-items: center;
     color: var(--text);
