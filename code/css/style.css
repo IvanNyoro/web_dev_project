@@ -178,11 +178,21 @@ button {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 1.5rem;
     align-items: stretch;
+    overflow: hidden; /* cuts any excess content from appearing the section */ 
+}
+
+.story-section .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.story-section .row > [class*="col-"] {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
 }
 
 .story-image {
     min-height: 260px;
-    height: 100%;
     display: grid;
     place-items: center;
     color: var(--text);
@@ -485,6 +495,20 @@ button {
     .team-grid,
     .features {
         grid-template-columns: 1fr;
+    }
+
+    .story-section {
+        grid-template-columns: 1fr;
+    }
+
+    .story-section .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .story-section .row > [class*="col-"] {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
