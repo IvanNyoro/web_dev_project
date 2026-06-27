@@ -72,8 +72,23 @@ button {
     transition: color 0.2s ease;
 }
 
-.panel a:hover {
+.panel a:hover,
+.panel a.active {
     color: var(--text);
+}
+
+.panel a.active {
+    font-weight: 700;
+}
+
+.panel a.active::after {
+    content: "";
+    display: block;
+    margin: 0.35rem auto 0;
+    width: 40%;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 1px;
 }
 
 .interactives {
