@@ -131,12 +131,19 @@
                 // Prevent the browser from sending the form immediately.
                 event.preventDefault();
 
+                // Run the browser's built-in validation first (required, type, minlength, etc.).
+                if (!signupForm.checkValidity()) {
+                    // Show native messages and focus the first invalid field.
+                    signupForm.reportValidity();
+                    return;
+                }
+
                 const errors = [];
 
                 // Check whether the two password fields match.
                 if (password && confirmPassword && password.value !== confirmPassword.value) {
                     errors.push('Passwords do not match.');
-                }
+            }
 
                 // Check if the user agreed to the terms.
                 if (terms && !terms.checked) {
