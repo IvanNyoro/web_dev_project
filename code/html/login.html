@@ -80,21 +80,35 @@
     </footer>
     <script>
         (function () {
+            // Find the password input field on the page.
             const pwd = document.getElementById('password');
+            // Find the checkbox that lets the user show or hide the password.
             const toggle = document.getElementById('showPassword');
+            // Find the login form so we can handle when it is submitted.
             const loginForm = document.getElementById('loginForm');
 
+            // If the password field and checkbox exist, set up the show/hide feature.
             if (toggle && pwd) {
                 toggle.addEventListener('change', function () {
+                    // When the checkbox changes, switch the password input type.
+                    // If the checkbox is checked, show the password in plain text.
+                    // If it is not checked, hide the password again.
                     pwd.type = this.checked ? 'text' : 'password';
                 });
             }
 
+            // If the login form is not on this page, stop here.
             if (!loginForm) return;
 
+            // Adding submit handler to the login form.
             loginForm.addEventListener('submit', function (event) {
+                // Preventing form from sending data to the server right now.
                 event.preventDefault();
+
+                // Tell user that the login was successful.
                 alert('Login successful! Welcome back to BrassCraft.');
+
+                // Clear the form fields after the alert.
                 loginForm.reset();
             });
         })();
