@@ -40,7 +40,7 @@
                 <div class="col-lg-6">
                     <div class="contact-card">
                         <h2>Sign in</h2>
-                        <form action="/login" method="post" class="contact-form" novalidate>
+                        <form id="loginForm" action="/login" method="post" class="contact-form" novalidate>
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required autocomplete="email">
@@ -82,11 +82,23 @@
         (function () {
             const pwd = document.getElementById('password');
             const toggle = document.getElementById('showPassword');
-            if (!pwd || !toggle) return;
-            toggle.addEventListener('change', function () {
-                pwd.type = this.checked ? 'text' : 'password';
+            const loginForm = document.getElementById('loginForm');
+
+            if (toggle && pwd) {
+                toggle.addEventListener('change', function () {
+                    pwd.type = this.checked ? 'text' : 'password';
+                });
+            }
+
+            if (!loginForm) return;
+
+            loginForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                alert('Login successful! Welcome back to BrassCraft.');
+                loginForm.reset();
             });
         })();
     </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

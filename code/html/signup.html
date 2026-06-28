@@ -101,49 +101,6 @@
         </div>
     </footer>
 
-    <script>
-        (function () {
-            const form = document.getElementById('signupForm');
-            const password = document.getElementById('password');
-            const confirm = document.getElementById('confirmPassword');
-            const showPassword = document.getElementById('showPassword');
-            const errors = document.getElementById('formErrors');
-
-            function showError(msg) {
-                errors.textContent = msg;
-            }
-
-            function clearError() {
-                errors.textContent = '';
-            }
-
-            password.addEventListener('input', clearError);
-            confirm.addEventListener('input', clearError);
-
-            if (showPassword) {
-                showPassword.addEventListener('change', function () {
-                    const type = this.checked ? 'text' : 'password';
-                    password.type = type;
-                    confirm.type = type;
-                });
-            }
-
-            form.addEventListener('submit', function (e) {
-                clearError();
-
-                if (password.value !== confirm.value) {
-                    e.preventDefault();
-                    showError('Passwords do not match.');
-                    confirm.focus();
-                    return;
-                }
-
-                if (!form.checkValidity()) {
-                    e.preventDefault();
-                    showError('Please fill out the required fields correctly.');
-                }
-            });
-        })();
-    </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
