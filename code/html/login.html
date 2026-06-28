@@ -102,10 +102,18 @@
 
             // Adding submit handler to the login form.
             loginForm.addEventListener('submit', function (event) {
-                // Preventing form from sending data to the server right now.
+                // Prevent the browser's default submit behavior so we can control validation.
                 event.preventDefault();
 
-                // Tell user that the login was successful.
+                // Use the form's validation API to check required fields and other constraints.
+                // `checkValidity()` returns false if any required field is empty or invalid.
+                if (!loginForm.checkValidity()) {
+                    // `reportValidity()` shows the browser's built-in messages and focuses the first invalid field.
+                    loginForm.reportValidity();
+                    return; // stop here — do not proceed to the success alert
+                }
+
+                // If we reach here, the form passed validation — show success message.
                 alert('Login successful! Welcome back to BrassCraft.');
 
                 // Clear the form fields after the alert.
