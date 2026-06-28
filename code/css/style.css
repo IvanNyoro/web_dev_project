@@ -408,7 +408,7 @@ button {
 }
 
 .btn.primary:hover,
-.btn.primary:focus-visible {
+.btn.primary:focus-visible /* focus-visible for acccessibility by kbd users */ {
     transform: translateY(-2px);
     filter: brightness(1.05);
     box-shadow: 0 18px 42px rgba(212, 175, 55, 0.28);
