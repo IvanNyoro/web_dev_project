@@ -77,6 +77,9 @@ button {
     color: var(--text);
 }
 
+/* `.active` is added to the navigation link that matches the
+ current page. It makes the link stand out so users know where they are.
+*/
 .panel a.active {
     font-weight: 700;
 }
@@ -529,6 +532,11 @@ button {
     color: var(--accent);
 }
 
+/* Media queries let us change layout for smaller screens.
+ `max-width: 900px` applies the rules below when the browser width is
+ 900px or smaller (tablets and small laptops). Use these to stack columns
+ into single columns, reduce paddings, or resize images for better reading.
+*/
 @media (max-width: 900px) {
     .grid-card,
     .story-section,
@@ -553,6 +561,10 @@ button {
     }
 }
 
+/* This breakpoint (`max-width: 680px`) targets mobile phones.
+ It typically makes the header and content use smaller side padding and
+ stacks navigation vertically to keep tap targets large and readable.
+*/
 @media (max-width: 680px) {
     .page-header,
     .content,
@@ -628,10 +640,13 @@ button {
     background: transparent;
 }
 
-/* FAQ CTA Styling */
+/* This targets the primary button inside the FAQ callout section.
+*/
 #faq-cta.callout .btn.primary {
     margin-top: 1rem;
 }
+
+
 
 .footer-inner {
     display: flex;
