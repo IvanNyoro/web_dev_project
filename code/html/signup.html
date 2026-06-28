@@ -78,7 +78,7 @@
                             </div>
                             <div class="form-group d-flex align-items-center gap-2">
                                 <input type="checkbox" id="terms" name="terms" required />
-                                <label for="terms" class="mb-0">I agree to the terms and privacy policy</label>
+                                <label for="terms" class="form-check-label mb-0">I agree to the terms and privacy policy</label>
                             </div>
                             <div class="form-error" id="formErrors" aria-live="polite"></div>
                             <div class="form-actions">
@@ -101,6 +101,60 @@
         </div>
     </footer>
 
+    <script>
+        (function () {
+            // Find the signup form on the page.
+            const signupForm = document.getElementById('signupForm');
+            // Find the password fields so we can compare them.
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+            // Find the checkbox that can show or hide the password text.
+            const showPassword = document.getElementById('showPassword');
+            // Find the terms checkbox so the user must agree before submission.
+            const terms = document.getElementById('terms');
+
+            // If the show/hide password checkbox exists and the password fields exist,
+            // make the checkbox change the field type from password to text.
+            if (showPassword && password && confirmPassword) {
+                showPassword.addEventListener('change', function () {
+                    const type = this.checked ? 'text' : 'password';
+                    password.type = type;
+                    confirmPassword.type = type;
+                });
+            }
+
+            // If the signup form is not found, stop running this script.
+            if (!signupForm) return;
+
+            // When the form is submitted, run this function.
+            signupForm.addEventListener('submit', function (event) {
+                // Prevent the browser from sending the form immediately.
+                event.preventDefault();
+
+                const errors = [];
+
+                // Check whether the two password fields match.
+                if (password && confirmPassword && password.value !== confirmPassword.value) {
+                    errors.push('Passwords do not match.');
+                }
+
+                // Check if the user agreed to the terms.
+                if (terms && !terms.checked) {
+                    errors.push('Please agree to the terms and privacy policy to proceed.');
+                }
+
+                // If there are any problems, show them in an alert and do not continue.
+                if (errors.length) {
+                    alert(errors.join('\n'));
+                    return;
+                }
+
+                // If everything is good, show a success message and reset the form.
+                alert('Your account has been created successfully. Welcome to BrassCraft!');
+                signupForm.reset();
+            });
+        })();
+    </script>
     <script src="../js/main.js"></script>
 </body>
 </html>
